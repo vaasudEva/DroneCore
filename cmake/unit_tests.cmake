@@ -8,8 +8,8 @@ add_executable(unit_tests_runner
 
 if (MSVC)
     # We need this to prevent linking errors from happening in the Windows build.
-    target_compile_definitions(unit_tests_runner PRIVATE -DGTEST_LINKED_AS_SHARED_LIBRARY)
-    target_compile_options(unit_tests_runner PUBLIC "/wd4251" "/wd4275")
+    #target_compile_definitions(unit_tests_runner PRIVATE -DGTEST_LINKED_AS_SHARED_LIBRARY)
+    #target_compile_options(unit_tests_runner PUBLIC "/wd4251" "/wd4275")
 endif()
 
 target_compile_definitions(unit_tests_runner PRIVATE FAKE_TIME=1)
